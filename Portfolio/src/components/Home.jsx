@@ -1,19 +1,22 @@
 function Home() {
   return (
-    <section className="home" id="home">
-      <div className="container home__inner">
-        <p className="kicker">Designer · Web · Creative</p>
-        <h2 className="home__title">
-          I design and build clean,<br />
-          emotional digital experiences.
-        </h2>
-        <p className="home__sub">
-          Web design, React projects, visual storytelling.
-        </p>
+    <section className="home home--bg" id="home">
+      <div className="container home__grid">
+        <div className="home__text">
+          <p className="kicker">Trilingual · Design · Web</p>
 
-        <div className="home__cta">
-          <a href="#portfolio" className="btn">View portfolio</a>
-          <a href="#contact" className="btn btn--ghost">Contact</a>
+          <h2 className="home__title">
+            Soojin Lee
+          </h2>
+
+          <p className="home__sub">
+            Portfolio — web design, React projects, and visual storytelling.
+          </p>
+
+          <div className="home__cta">
+            <a className="btn" href="#portfolio">View portfolio</a>
+            <a className="btn btn--ghost" href="#contact">Contact</a>
+          </div>
         </div>
       </div>
     </section>

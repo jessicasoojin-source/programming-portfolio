@@ -2,7 +2,7 @@ function Header() {
   return (
     <header className="header">
       <div className="container header__inner">
-        <h1 className="logo">Soojin Lee</h1>
+        <a className="logo" href="#home">Soojin Lee</a>
 
         <nav className="nav">
           <a href="#home">Home</a>

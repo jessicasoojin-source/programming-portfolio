@@ -38,7 +38,7 @@ function Portfolio() {
                   <span className="chip">{p.tag}</span>
                 </div>
                 <p className="muted">{p.desc}</p>
-                <button className="btnSmall">View</button>
+                <button className="btnSmall" type="button">View</button>
               </div>
             </article>
           ))}

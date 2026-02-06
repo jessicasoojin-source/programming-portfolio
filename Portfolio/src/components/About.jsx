@@ -1,25 +1,32 @@
 function About() {
   return (
-    <section className="section section--muted" id="about">
-      <div className="container twoCol">
-        <div>
+    <section className="section aboutSplit" id="about">
+      <div className="container aboutSplit__grid">
+        <div className="aboutSplit__text">
           <h2>About</h2>
+
           <p className="muted">
-            I’m a bilingual creative based in South Korea, focused on web design,
-            React, and visual storytelling. I enjoy minimal layouts,
-            strong typography, and emotional concepts.
+            I’m a trilingual creative based in South Korea. I work across design and web,
+            and I’m strong at communication — Spanish, English, and Korean.
           </p>
+
+          <div className="aboutPills">
+            <span className="pill">Spanish · Native</span>
+            <span className="pill">English · Fluent</span>
+            <span className="pill">Korean · Working</span>
+          </div>
+
+          <div className="aboutBox">
+            <h3>Strengths</h3>
+            <ul className="list">
+              <li>Clear communication & teamwork in multicultural environments</li>
+              <li>UI/UX sense + clean visual layout</li>
+              <li>Fast learning, consistent iteration</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="box">
-          <h3>Skills</h3>
-          <ul className="list">
-            <li>Figma · UI/UX</li>
-            <li>HTML · CSS · JavaScript</li>
-            <li>React · Vite · Git</li>
-            <li>Premiere Pro · After Effects</li>
-          </ul>
-        </div>
+        <div className="aboutSplit__photo" aria-label="Profile photo" />
       </div>
     </section>
   )

@@ -4,27 +4,36 @@ function Contact() {
       <div className="container">
         <div className="section__head">
           <h2>Contact</h2>
-          <p>Let’s work together.</p>
+          <p>If you’d like to work together, feel free to reach out.</p>
         </div>
 
-        <form className="form" onSubmit={(e) => e.preventDefault()}>
-          <label>
-            Name
-            <input placeholder="Your name" />
-          </label>
+        <div className="contactBox">
+          <div className="contactItem">
+            <span className="contactLabel">Email</span>
+            <a href="mailto:jessicasoojin@gmail.com">jessicasoojin@gmail.com</a>
+          </div>
 
-          <label>
-            Email
-            <input type="email" placeholder="you@email.com" />
-          </label>
+          <div className="contactItem">
+            <span className="contactLabel">Phone</span>
+            <a href="tel:+821017336437">+82 10-1733-6437</a>
+          </div>
 
-          <label>
-            Message
-            <textarea rows="4" placeholder="Tell me about your project" />
-          </label>
+          <div className="contactItem">
+            <span className="contactLabel">Location</span>
+            <span>South Korea</span>
+          </div>
 
-          <button className="btn">Send</button>
-        </form>
+          <div className="contactItem">
+            <span className="contactLabel">GitHub</span>
+            <a
+              href="https://github.com/jessicasoojin-source"
+              target="_blank"
+              rel="noreferrer"
+            >
+              github.com/jessicasoojin-source
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   )

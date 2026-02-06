@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio"
 import Extra from "./components/Extra"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import "./index.css"
 
 function App() {
   return (
