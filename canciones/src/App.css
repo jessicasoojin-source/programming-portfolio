@@ -1,47 +1,129 @@
+/* Mix: base dark + minimal layout + pastel accent */
 .page {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 28px;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: rgba(255,255,255,0.92);
 }
 
 .top {
   display: flex;
   justify-content: space-between;
-  gap: 14px;
-  align-items: center;
+  align-items: flex-start;
+  gap: 18px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin: 6px 0 0;
+  opacity: 0.7;
 }
 
 .controls {
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .input {
   padding: 10px 12px;
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.16);
   background: rgba(255,255,255,0.06);
-  color: white;
+  color: rgba(255,255,255,0.92);
   outline: none;
-  min-width: 240px;
+  min-width: 220px;
+  transition: transform 120ms ease, border-color 120ms ease;
 }
 
+.input:focus {
+  border-color: rgba(255,255,255,0.34);
+  transform: translateY(-1px);
+}
+
+.select { min-width: 170px; }
+
 .check {
-  color: rgba(255,255,255,0.8);
   display: flex;
   gap: 8px;
   align-items: center;
+  user-select: none;
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 14px;
 }
 
 .card {
   border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 18px;
+  border-radius: 22px;
   padding: 16px;
   background: rgba(255,255,255,0.06);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  opacity: 0.9;
+}
+
+.form { display: grid; gap: 10px; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 800;
+  color: rgba(10,12,18,0.95);
+  background: linear-gradient(90deg, rgba(255, 223, 150, 0.95), rgba(255, 170, 214, 0.9));
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 120ms ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.hint {
+  margin: 10px 0 0;
+  opacity: 0.6;
+  font-size: 12px;
 }
 
 .list {
@@ -58,32 +140,64 @@
   align-items: center;
   gap: 12px;
   padding: 12px;
-  border-radius: 14px;
+  border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.08);
 }
 
-.title {
-  font-weight: 800;
-  color: white;
-}
-
-.detail {
-  margin-top: 2px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-}
+.title { font-weight: 900; }
+.detail { opacity: 0.72; font-size: 13px; margin-top: 2px; }
 
 .like {
   width: 44px;
   height: 40px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: transparent;
-  color: white;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
   cursor: pointer;
   font-size: 18px;
+  transition: transform 120ms ease;
 }
 
+.like:hover { transform: translateY(-1px); }
+
 .like.on {
-  border-color: rgba(255,255,255,0.35);
+  border-color: rgba(255,255,255,0.34);
+}
+
+.empty { opacity: 0.75; }
+
+.footer {
+  margin-top: 16px;
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .input { min-width: 160px; }
+}
+
+.actions {
+  margin-top: 8px;
+}
+
+.open {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.embed {
+  margin-top: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
 }
