@@ -1,5 +1,5 @@
 :root{
-  --bg:#ffffff;
+  --bg:#E8F6E9;
   --text:#0f172a;
   --muted:#64748b;
   --line:rgba(15,23,42,.12);
@@ -34,18 +34,26 @@ section{scroll-margin-top:90px}
 
 /* ===== fullpage scroll snap (main scrollea) ===== */
 main{
-  height:100vh;
-  overflow-y:auto;
-  scroll-snap-type:y mandatory;
-  scroll-behavior:smooth;
-}
-main > section{
   min-height:100vh;
-  scroll-snap-align:start;
-  scroll-snap-stop:always;
+  overflow: visible;
+}
+
+main > section{
+  min-height: 100vh;        /* o dejalo en 100vh si te gusta(lo deje con 100vh porque el AUTO no me gudtaba como me dejaba las medidas de cada seccion */
   display:flex;
-  align-items:center;
-  padding:90px 0; /* deja espacio para header */
+  align-items: center;           /* así no centra todo verticalmente */
+  padding:90px 0;
+}
+
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 /* ===== home hero ===== */
