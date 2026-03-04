@@ -16,7 +16,7 @@ export default function About() {
           <div className="about__chips">
             <span className="chip">Spanish · Native</span>
             <span className="chip">English · Fluent</span>
-            <span className="chip">Korean · Working</span>
+            <span className="chip">Korean   · Native</span>
           </div>
         </header>
 

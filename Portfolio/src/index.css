@@ -332,3 +332,45 @@ html{
     height: 260px;
   }
 }
+
+.home--bg{
+  position: relative;
+  overflow: hidden;
+  color:#fff;
+
+  /* imagen fija por ahora (sin video) */
+  background:
+    radial-gradient(1200px 700px at 70% 40%, rgba(232,246,233,.25), rgba(232,246,233,0) 55%),
+    linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 60%, rgba(0,0,0,.10) 100%),
+    url("/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 22px;
+  margin-top: 90px; /* porque tu header es fixed */
+}
+
+.home__video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.home__overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.25) 50%,
+    rgba(0,0,0,0.10) 100%
+  );
+  z-index: 1;
+}
+
+.home__grid{
+  position: relative;
+  z-index: 2;
+}
