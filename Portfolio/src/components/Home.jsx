@@ -3,7 +3,7 @@ function Home() {
     <section className="home home--bg" id="home">
       {/* 1) VIDEO DE FONDO: va primero para que quede detrás */}
       <video className="home__video" autoPlay muted loop playsInline>
-        <source src="/hero.mp4" type="video/mp4" />
+        <source src="/vid/dandelion.mp4" type="video/mp4" />
       </video>
 
       {/* 2) CAPA OSCURA SUAVE: mejora la lectura del texto */}

@@ -88,7 +88,9 @@ export default function About() {
 
           {/* RIGHT COLUMN – PHOTO ONLY */}
           <div className="about__image">
-            <div className="photoBox" aria-label="Profile image placeholder"></div>
+            <div className="photoBox">
+              <img src="/img/yo.png" alt="Soojin Lee profile"></img>
+            </div>
           </div>
 
         </div>
