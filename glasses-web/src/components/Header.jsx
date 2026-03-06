@@ -2,17 +2,17 @@ function Header() {
   return (
     <header className="header">
       <div className="header__inner">
-        <h1 className="logo">OJO Studio</h1>
+        <a href="#" className="logo">OJO STUDIO</a>
 
         <nav className="nav">
-          <a href="#">Shop</a>
-          <a href="#">Collection</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#shop">Shop</a>
+          <a href="#collection">Collection</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

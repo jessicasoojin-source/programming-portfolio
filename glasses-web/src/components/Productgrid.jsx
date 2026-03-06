@@ -16,45 +16,50 @@ const products = [
 
 function ProductGrid() {
   return (
-    <section className="section" id="shop">
+    <section className="section" id="collection">
       <div className="container">
         <div className="section__head">
           <h2 className="section__title">Collection</h2>
-          <p className="section__sub">OJO Studio — minimal frames, everyday identity.</p>
+          <p className="section__sub">
+            OJO Studio — minimal frames, everyday identity.
+          </p>
         </div>
 
         <Swiper
-  className="productSwiper"
-  modules={[Autoplay, Navigation]}
-  loop={true}
-  navigation
-  spaceBetween={14}
-  slidesPerView={4}                 // ✅ se ven 4
-  centeredSlides={true}             // ✅ centrado
-  autoplay={{
-    delay: 2500,                    // ✅ se mueve cada 2.5s (cambiá a gusto)
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  }}
-  breakpoints={{
-    0: { slidesPerView: 1.2, centeredSlides: true },
-    520: { slidesPerView: 2.2, centeredSlides: true },
-    900: { slidesPerView: 4, centeredSlides: true },
-  }}
->
-
+          className="productSwiper"
+          modules={[Autoplay, Navigation]}
+          loop={true}
+          navigation
+          spaceBetween={14}
+          slidesPerView={4}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          breakpoints={{
+            0: { slidesPerView: 1.2, centeredSlides: true },
+            520: { slidesPerView: 2.2, centeredSlides: true },
+            900: { slidesPerView: 4, centeredSlides: true },
+          }}
+        >
           {products.map((p) => (
             <SwiperSlide className="productSlide" key={p.id}>
               <article className="card">
-                <div className="card__img" aria-label={p.name} />
+                <div className="card__img" aria-label={p.name}></div>
+
                 <div className="card__body">
                   <div className="card__top">
                     <h3 className="card__title">{p.name}</h3>
                     <span className="chip">{p.tag}</span>
                   </div>
+
                   <div className="card__bottom">
                     <span className="price">{p.price}</span>
-                    <button className="btnSmall" type="button">Add</button>
+                    <button className="btnSmall" type="button">
+                      Add
+                    </button>
                   </div>
                 </div>
               </article>
