@@ -1,6 +1,9 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
-import ProductGrid from './components/ProductGrid'
+import ProductGrid from './components/Productgrid'
+import Editorial from './components/Editorial'
+import Stories from './components/Stories'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <Header />
       <Hero />
       <ProductGrid />
+      <Editorial />
+      <Stories />
+      <Footer />
     </>
   )
 }
