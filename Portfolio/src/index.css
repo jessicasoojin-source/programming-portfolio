@@ -5,6 +5,7 @@
   --line:rgba(15,23,42,.12);
   --accent:rgba(15,80,48,.20);
   --radius:18px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 *{

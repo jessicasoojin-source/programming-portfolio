@@ -4,16 +4,15 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 const products = [
-  { id: 1, name: 'Clear Frame', price: '₩39,000', tag: 'Transparent' },
-  { id: 2, name: 'Black Classic', price: '₩42,000', tag: 'Everyday' },
-  { id: 3, name: 'Metal Slim', price: '₩49,000', tag: 'Minimal' },
-  { id: 4, name: 'Soft Brown', price: '₩45,000', tag: 'Warm' },
-  { id: 5, name: 'Round Silver', price: '₩46,000', tag: 'Round' },
-  { id: 6, name: 'Square Bold', price: '₩44,000', tag: 'Square' },
-  { id: 7, name: 'Tinted Sun', price: '₩52,000', tag: 'Sunglasses' },
-  { id: 8, name: 'Thin Gold', price: '₩50,000', tag: 'Metal' },
+  { id: 1, name: 'Clear Frame', price: '₩39,000', tag: 'Transparent', img: '/img/glasses (1).png' },
+  { id: 2, name: 'Black Classic', price: '₩42,000', tag: 'Everyday', img: '/img/glasses (2).png' },
+  { id: 3, name: 'Metal Slim', price: '₩49,000', tag: 'Minimal', img: '/img/glasses (3).png' },
+  { id: 4, name: 'Soft Brown', price: '₩45,000', tag: 'Warm', img: '/img/glasses (4).png' },
+  { id: 5, name: 'Round Silver', price: '₩46,000', tag: 'Round', img: '/img/glasses (5).png' },
+  { id: 6, name: 'Square Bold', price: '₩44,000', tag: 'Square', img: '/img/glasses (6).png' },
+  { id: 7, name: 'Tinted Sun', price: '₩52,000', tag: 'Sunglasses', img: '/img/glasses (7).png' },
+  { id: 8, name: 'Thin Gold', price: '₩50,000', tag: 'Metal', img: '/img/glasses (8).png' },
 ]
-
 function ProductGrid() {
   return (
     <section className="section" id="collection">
@@ -47,7 +46,10 @@ function ProductGrid() {
           {products.map((p) => (
             <SwiperSlide className="productSlide" key={p.id}>
               <article className="card">
-                <div className="card__img" aria-label={p.name}></div>
+                <div
+  className="card__img"
+  style={{ backgroundImage: `url(${p.img})` }}
+></div>
 
                 <div className="card__body">
                   <div className="card__top">
