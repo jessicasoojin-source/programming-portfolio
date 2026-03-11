@@ -105,29 +105,19 @@ img{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding-top:60px;
 }
 
 .hero__content{
   text-align:center;
-  color:#111;
   max-width:720px;
-}
-
-.hero__kicker{
-  letter-spacing:3px;
-  font-size:12px;
-  margin-bottom:10px;
-  color:#222;
 }
 
 .hero__title{
   font-family:'Playfair Display', serif;
-  font-size:68px;
+  font-size:64px;
   font-weight:500;
   line-height:1.1;
-  margin:0 0 16px;
-  color:#0f2b46;
+  margin-bottom:16px;
 }
 
 .hero__text{
@@ -142,7 +132,6 @@ img{
   background:transparent;
   cursor:pointer;
   font-size:13px;
-  transition:all .3s ease;
 }
 
 .hero__btn:hover{
@@ -154,30 +143,26 @@ img{
 
 .section{
   padding:100px 0;
-  background:#efefef;
 }
 
 .section__head{
-  text-align:left;
   margin-bottom:28px;
 }
 
 .section__title{
   font-family:'Playfair Display', serif;
   font-size:48px;
-  font-weight:500;
-  margin:0 0 8px;
-  color:#0f2b46;
+  margin-bottom:8px;
 }
 
 .section__sub{
   color:#7b8794;
-  font-size:15px;
-  margin:0;
 }
 
+/* ================= PRODUCT GRID ================= */
+
 .productSwiper{
-  padding:10px 10px 30px;
+  padding-bottom:30px;
 }
 
 .productSlide{
@@ -197,11 +182,19 @@ img{
   box-shadow:0 16px 35px rgba(0,0,0,.08);
 }
 
+/* imagen */
+
 .card__img{
   height:260px;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  overflow:hidden;
+  background:#f3f3f3;
+}
+
+.card__imgReal{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .card__body{
@@ -212,24 +205,18 @@ img{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:10px;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 .card__title{
   font-size:18px;
-  font-weight:500;
-  margin:0;
-  color:#1b2f45;
 }
 
 .chip{
   font-size:12px;
   padding:6px 10px;
-  border:1px solid #d8d8d8;
+  border:1px solid #ddd;
   border-radius:999px;
-  color:#6a7178;
-  background:#fafafa;
 }
 
 .card__bottom{
@@ -239,18 +226,14 @@ img{
 }
 
 .price{
-  font-size:16px;
   font-weight:600;
-  color:#24384d;
 }
 
 .btnSmall{
-  padding:9px 16px;
-  border:1px solid #1f1f1f;
+  padding:8px 14px;
+  border:1px solid #111;
   background:transparent;
   border-radius:12px;
-  font-size:12px;
-  cursor:pointer;
 }
 
 .btnSmall:hover{
@@ -258,22 +241,11 @@ img{
   color:#fff;
 }
 
-/* swiper arrows */
+/* ================= SWIPER ================= */
 
 .swiper-button-prev,
 .swiper-button-next{
   color:#111;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:rgba(255,255,255,.88);
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after{
-  font-size:16px;
-  font-weight:700;
 }
 
 /* ================= EDITORIAL ================= */
@@ -281,7 +253,7 @@ img{
 .editorial{
   display:grid;
   grid-template-columns:1fr 1fr;
-  min-height:620px;
+  min-height:600px;
 }
 
 .editorial__image{
@@ -295,31 +267,18 @@ img{
   flex-direction:column;
   justify-content:center;
   padding:80px;
-  background:#ffffff;
-}
-
-.editorial__kicker{
-  letter-spacing:3px;
-  font-size:12px;
-  color:#777;
-  margin-bottom:14px;
+  background:#fff;
 }
 
 .editorial__title{
   font-family:'Playfair Display', serif;
-  font-size:52px;
-  font-weight:500;
-  margin:0 0 18px;
-  line-height:1.1;
-  color:#0f2b46;
+  font-size:48px;
+  margin-bottom:18px;
 }
 
 .editorial__text{
-  font-size:15px;
   color:#666;
-  max-width:420px;
-  margin-bottom:28px;
-  line-height:1.6;
+  margin-bottom:24px;
 }
 
 .editorial__btn{
@@ -327,19 +286,12 @@ img{
   padding:12px;
   border:1px solid #111;
   background:transparent;
-  cursor:pointer;
-}
-
-.editorial__btn:hover{
-  background:#111;
-  color:#fff;
 }
 
 /* ================= STORIES ================= */
 
 .stories{
   padding:100px 0;
-  background:#efefef;
 }
 
 .stories__grid{
@@ -350,32 +302,25 @@ img{
 
 .storyCard{
   background:#fff;
-  border:1px solid #e3e3e3;
   border-radius:20px;
   overflow:hidden;
+  border:1px solid #e3e3e3;
 }
 
 .storyCard__img{
   height:260px;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  overflow:hidden;
+  background:#f3f3f3;
+}
+
+.storyCard__imgReal{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .storyCard__body{
   padding:16px;
-}
-
-.storyCard__title{
-  margin:0 0 8px;
-  font-size:18px;
-  font-weight:500;
-}
-
-.storyCard__text{
-  margin:0;
-  font-size:14px;
-  color:#666;
 }
 
 /* ================= FOOTER ================= */
@@ -383,7 +328,7 @@ img{
 .footer{
   background:#111;
   color:#fff;
-  padding:50px 0 24px;
+  padding:50px 0;
 }
 
 .footer__inner{
@@ -417,7 +362,7 @@ img{
 @media (max-width:900px){
 
   .hero__title{
-    font-size:46px;
+    font-size:42px;
   }
 
   .editorial{
@@ -433,11 +378,11 @@ img{
 @media (max-width:520px){
 
   .hero__title{
-    font-size:34px;
+    font-size:32px;
   }
 
   .stories__grid{
     grid-template-columns:1fr;
   }
 
-}
+} 

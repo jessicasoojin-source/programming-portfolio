@@ -13,10 +13,12 @@ const products = [
   { id: 7, name: 'Tinted Sun', price: '₩52,000', tag: 'Sunglasses', img: '/img/glasses (7).png' },
   { id: 8, name: 'Thin Gold', price: '₩50,000', tag: 'Metal', img: '/img/glasses (8).png' },
 ]
+
 function ProductGrid() {
   return (
     <section className="section" id="collection">
       <div className="container">
+
         <div className="section__head">
           <h2 className="section__title">Collection</h2>
           <p className="section__sub">
@@ -29,7 +31,7 @@ function ProductGrid() {
           modules={[Autoplay, Navigation]}
           loop={true}
           navigation
-          spaceBetween={14}
+          spaceBetween={20}
           slidesPerView={4}
           centeredSlides={true}
           autoplay={{
@@ -38,20 +40,27 @@ function ProductGrid() {
             pauseOnMouseEnter: true,
           }}
           breakpoints={{
-            0: { slidesPerView: 1.2, centeredSlides: true },
-            520: { slidesPerView: 2.2, centeredSlides: true },
-            900: { slidesPerView: 4, centeredSlides: true },
+            0: { slidesPerView: 1.2 },
+            520: { slidesPerView: 2.2 },
+            900: { slidesPerView: 4 },
           }}
         >
+
           {products.map((p) => (
-            <SwiperSlide className="productSlide" key={p.id}>
+            <SwiperSlide key={p.id} className="productSlide">
+
               <article className="card">
-                <div
-  className="card__img"
-  style={{ backgroundImage: `url(${p.img})` }}
-></div>
+
+                <div className="card__img">
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="card__imgReal"
+                  />
+                </div>
 
                 <div className="card__body">
+
                   <div className="card__top">
                     <h3 className="card__title">{p.name}</h3>
                     <span className="chip">{p.tag}</span>
@@ -59,15 +68,18 @@ function ProductGrid() {
 
                   <div className="card__bottom">
                     <span className="price">{p.price}</span>
-                    <button className="btnSmall" type="button">
-                      Add
-                    </button>
+                    <button className="btnSmall">Add</button>
                   </div>
+
                 </div>
+
               </article>
+
             </SwiperSlide>
           ))}
+
         </Swiper>
+
       </div>
     </section>
   )
